@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/lightGreen</color>
+    <color name="colorPrimaryDark">@color/darkGreen</color>
+    <color name="colorAccent">@color/orangeMania</color>
+
+    <color name="white">@android:color/white</color>
+    <color name="dirtyWhite">#FBFCFC</color>
+
+    <color name="lightGreen">#9DDB32</color>
+    <color name="darkGreen">#63B727</color>
+    <color name="coal">#053333</color>
+    <color name="nunclearGray">#8AA1A1</color>
+    <color name="mediumRed">#E54D3D</color>
+    <color name="orangeMania">#F28510</color>
+    <color name="charcoal">#1D4949</color>
+</resources>

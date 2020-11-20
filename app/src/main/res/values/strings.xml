@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BaseApp</string>
+
+    <!-- Header strings -->
+    <string name="header_title">Regional Carbon Emission intensity</string>
+    <string name="header_from">From: %s</string>
+    <string name="header_to">To: %s</string>
+    <string name="forecast">forecast</string>
+</resources>
