@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginStart="@dimen/standard_margin_double"
-    android:layout_marginEnd="@dimen/standard_margin_double">
+    android:layout_marginTop="@dimen/standard_margin"
+    android:layout_marginBottom="@dimen/standard_margin"
+    android:background="@color/dirtyWhite"
+    >
 
     <TextView
         android:id="@+id/regionTitle"
@@ -16,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="@dimen/standard_margin"
         android:paddingTop="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin_double"
         style="@style/StandardText.Large"
         android:text="Scotland"
         />
@@ -29,20 +32,19 @@
         app:layout_constraintTop_toBottomOf="@id/regionTitle"
         android:layout_marginEnd="@dimen/standard_margin"
         android:paddingBottom="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin_double"
         style="@style/StandardText"
         android:text="Low"
         />
 
     <ImageView
         android:id="@+id/forecastIndexIndicator"
-        android:layout_width="0dp"
+        android:layout_width="20dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/forecastValue"
-        app:layout_constraintStart_toStartOf="@id/forecastValue"
-        android:background="@color/lightGreen"
-        android:src="@drawable/green_gradient_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/darkMoss"
         />
 
     <TextView
@@ -51,20 +53,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/forecastIndexIndicator"
         android:paddingBottom="@dimen/standard_margin"
         android:paddingStart="@dimen/standard_margin_double"
         android:paddingEnd="@dimen/standard_margin_double"
         style="@style/StandardText.XLarge"
         android:text="99"
         />
-
-    <ImageView
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/lightGreen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/forecastIndexIndicator"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

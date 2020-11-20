@@ -23,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            style="@style/TitleText"
+            style="@style/TitleText.White"
             android:text="@string/header_title"
             />
 
@@ -35,6 +35,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/headerTitle"
             style="@style/StandardText"
+            android:textColor="@color/white"
             android:text="from: 12/22"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>

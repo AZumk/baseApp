@@ -28,7 +28,7 @@ data class RegionalData(
 @JsonClass(generateAdapter = true)
 data class CarbonIntensity(
     @Json(name = "forecast") val forecast: String,
-    @Json(name = "index") val index: CarbonIndex
+    @Json(name = "index") val index: String
 )
 
 @JsonClass(generateAdapter = true)
@@ -37,10 +37,15 @@ data class GenerationMix(
     @Json(name = "perc") val percentage: String
 )
 
-enum class CarbonIndex(value: String) {
-    VERY_LOW("very_low"),
+enum class CarbonIndex(val value: String) {
+    VERY_LOW("very low"),
     LOW("low"),
     MODERATE("moderate"),
     HIGH("high"),
-    VERY_HIGH("very_high")
+    VERY_HIGH("very high");
+
+    companion object {
+        fun from(index: String): CarbonIndex =
+            values().first { it.value == index }
+    }
 }

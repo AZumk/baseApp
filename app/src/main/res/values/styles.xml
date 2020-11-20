@@ -25,7 +25,15 @@
         <item name="android:textSize">@dimen/standard_text_small</item>
     </style>
 
+    <style name="StandardText.XLarge.White" parent="StandardText.XLarge">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="TitleText" parent="StandardText.XLarge">
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleText.White" parent="TitleText">
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

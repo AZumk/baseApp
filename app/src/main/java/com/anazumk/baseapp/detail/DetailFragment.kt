@@ -49,7 +49,7 @@ class DetailFragment : Fragment() {
         regionName?.text = regionalData.shortName
         regiondno?.text = regionalData.dnoRegion
         regionIntensityForecast?.text = regionalData.intensity.forecast
-        regionIntensityIndex?.text = regionalData.intensity.index.name.toLowerCase()
+        regionIntensityIndex?.text = regionalData.intensity.index
     }
 
     private fun updateGraph(){

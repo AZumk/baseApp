@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/lightGreen</color>
-    <color name="colorPrimaryDark">@color/darkGreen</color>
+    <color name="colorPrimary">@color/darkMoss</color>
+    <color name="colorPrimaryDark">@color/darkMoss2</color>
     <color name="colorAccent">@color/orangeMania</color>
 
     <color name="white">@android:color/white</color>
-    <color name="dirtyWhite">#FBFCFC</color>
+    <color name="dirtyWhite">#E9F0F0</color>
 
     <color name="lightGreen">#9DDB32</color>
     <color name="darkGreen">#63B727</color>
+    <color name="darkMoss">#4F9A74</color>
+    <color name="lightMoss">#7FB930</color>
+    <color name="darkMoss2">#368787</color>
+
     <color name="coal">#053333</color>
     <color name="nunclearGray">#8AA1A1</color>
-    <color name="mediumRed">#E54D3D</color>
     <color name="orangeMania">#F28510</color>
+
+    <color name="orange">#F7AD55</color>
+    <color name="darkOrange">#F38A0C</color>
+
+    <color name="red">#EA7062</color>
+    <color name="mediumRed">#E54D3D</color>
+
     <color name="charcoal">#1D4949</color>
 </resources>
