@@ -1,6 +1,5 @@
 package com.anazumk.baseapp.main
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +8,10 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anazumk.baseapp.R
+import com.anazumk.baseapp.detail.DetailFragment
 import com.anazumk.baseapp.network.model.RegionalData
 import kotlinx.android.synthetic.main.fragment_main.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : Fragment(), RecyclerViewListener {
 
@@ -19,7 +20,7 @@ class MainFragment : Fragment(), RecyclerViewListener {
         fun newInstance() = MainFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +31,6 @@ class MainFragment : Fragment(), RecyclerViewListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         recyclerview.layoutManager = LinearLayoutManager(context)
 
         setObservers()

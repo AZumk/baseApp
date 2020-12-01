@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.anazumk.baseapp.R
 import com.anazumk.baseapp.network.model.GenerationMix
+import kotlinx.android.synthetic.main.item_generation_mix.view.*
 
 class GenerationMixAdapter(private val generationMix: List<GenerationMix>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -13,7 +14,7 @@ class GenerationMixAdapter(private val generationMix: List<GenerationMix>) : Rec
         GenerationMixViewHolder(
             LayoutInflater
                 .from(parent.context)
-                .inflate(R.layout.item_region_carbon, parent, false))
+                .inflate(R.layout.item_generation_mix, parent, false))
 
 
     override fun getItemCount(): Int = generationMix.size
@@ -26,8 +27,8 @@ class GenerationMixAdapter(private val generationMix: List<GenerationMix>) : Rec
 class GenerationMixViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
     fun updateView(mix: GenerationMix){
-        itemView.apply {
-
-        }
+        itemView.fuelType.text = mix.fuel
+        itemView.fuelPercent.text = mix.percentage.toString()
+        itemView.fuelPercentBar.progress = mix.percentage.toInt()
     }
 }

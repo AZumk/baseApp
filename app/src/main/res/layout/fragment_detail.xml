@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="@dimen/standard_margin_triple"
             android:gravity="center"
-            style="@style/TitleText"
+            style="@style/TitleText.White"
             android:text="Regional name"/>
 
         <TextView
@@ -34,33 +34,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/regionName"
-            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
             android:gravity="center"
-            style="@style/StandardText"
+            style="@style/StandardText.White"
             android:text="Region provider"/>
 
         <TextView
             android:id="@+id/regionIntensityForecast"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/regionIntensityIndex"
             app:layout_constraintTop_toBottomOf="@id/regiondno"
             android:layout_marginTop="@dimen/standard_margin_triple"
-            android:gravity="center"
-            style="@style/StandardText"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:gravity="end"
+            style="@style/TitleText.White"
             android:text="120"/>
 
         <TextView
             android:id="@+id/regionIntensityIndex"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/regionIntensityForecast"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/regionIntensityForecast"
-            android:layout_marginTop="@dimen/standard_margin"
-            android:gravity="center"
-            style="@style/StandardText"
+           app:layout_constraintTop_toTopOf="@id/regionIntensityForecast"
+            app:layout_constraintBottom_toBottomOf="@id/regionIntensityForecast"
+            android:layout_marginStart="@dimen/standard_margin"
+            style="@style/StandardText.White"
             android:text="High"/>
 
     <androidx.core.widget.NestedScrollView

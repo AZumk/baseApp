@@ -34,7 +34,7 @@ data class CarbonIntensity(
 @JsonClass(generateAdapter = true)
 data class GenerationMix(
     @Json(name = "fuel") val fuel: String,
-    @Json(name = "perc") val percentage: String
+    @Json(name = "perc") val percentage: Float
 )
 
 enum class CarbonIndex(val value: String) {
