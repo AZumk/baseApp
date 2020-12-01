@@ -3,12 +3,14 @@ package com.anazumk.baseapp.utils
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import java.lang.reflect.Type
+import java.util.*
 
 class JsonParser {
 
     companion object {
         fun getMoshi(): Moshi{
-            return  Moshi.Builder()
+            return Moshi.Builder()
+                .add(Date::class.java, DateAdapter())
                 .addLast(KotlinJsonAdapterFactory())
                 .build()
         }

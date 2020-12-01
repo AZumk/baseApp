@@ -1,6 +1,7 @@
 package com.anazumk.baseapp.network
 
 import com.anazumk.baseapp.network.model.CustomError
+import com.anazumk.baseapp.utils.JsonParser
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -10,9 +11,9 @@ import retrofit2.Retrofit
 class NetworkHelper {
 
     companion object {
-        fun getAPI(): BaseAPI{
+        fun getAPI(): BaseAPI {
             val retrofit = Retrofit.Builder()
-                .addConverterFactory(MoshiConverterFactory.create())
+                .addConverterFactory(MoshiConverterFactory.create(JsonParser.getMoshi()))
                 .baseUrl("https://api.carbonintensity.org.uk/")
                 .build()
 

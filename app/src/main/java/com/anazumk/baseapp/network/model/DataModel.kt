@@ -3,6 +3,7 @@ package com.anazumk.baseapp.network.model
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import java.io.Serializable
+import java.util.*
 
 @JsonClass(generateAdapter = true)
 data class Data(
@@ -11,8 +12,8 @@ data class Data(
 
 @JsonClass(generateAdapter = true)
 data class Regions(
-    @Json(name = "from") val from: String,
-    @Json(name = "to") val to: String,
+    @Json(name = "from") val from: Date?,
+    @Json(name = "to") val to: Date?,
     @Json(name = "regions") val regionsList: List<RegionalData>
 )
 

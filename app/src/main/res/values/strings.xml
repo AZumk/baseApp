@@ -3,7 +3,8 @@
 
     <!-- Header strings -->
     <string name="header_title">Regional Carbon Emission intensity</string>
-    <string name="header_from">From: %s</string>
-    <string name="header_to">To: %s</string>
+    <string name="header_time">%s - %s</string>
     <string name="forecast">forecast</string>
+    <string name="error_loading">Something went wrong</string>
+    <string name="try_again">Try again</string>
 </resources>

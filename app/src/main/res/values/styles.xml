@@ -40,4 +40,8 @@
     <style name="TitleText.White" parent="TitleText">
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <style name="ButtonLink" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/darkMoss2</item>
+    </style>
 </resources>

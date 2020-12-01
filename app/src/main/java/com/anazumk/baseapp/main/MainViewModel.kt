@@ -10,18 +10,19 @@ import com.anazumk.baseapp.network.model.Regions
 class MainViewModel : ViewModel() {
 
     val regionsData = MutableLiveData<Regions>()
-    val gbData = MutableLiveData<RegionalData>()
     val loadingError =  MutableLiveData<CustomError>()
     val isLoading = MutableLiveData<Boolean>()
 
-    fun getCall() {
+    fun getRegionalCarbonIntensity() {
+
         isLoading.postValue(true)
+
        val call = NetworkHelper.getAPI().getRegionalIndex()
         NetworkHelper.execute(call, {
-            it?.data?.first()?.let {regions ->
+            it?.data?.first()?.let { regions ->
                 regionsData.postValue(regions)
-                gbData.postValue(regions.regionsList.find { region -> region.regionId == 18 })
-            }
+            } ?: loadingError.postValue(CustomError(0, "Bad data received"))
+
             isLoading.postValue(false)
         }, {
             loadingError.postValue(it)
